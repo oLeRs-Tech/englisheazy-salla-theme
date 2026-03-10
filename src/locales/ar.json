@@ -1,0 +1,29 @@
+{
+  "theme": {
+    "brand_name": "إنجلش إيزي",
+    "menu_home": "الرئيسية",
+    "menu_books": "الكتب",
+    "menu_package": "The Z Package",
+    "menu_contact": "تواصل معنا",
+    "menu_privacy": "سياسة الخصوصية",
+    "menu_terms": "الشروط والأحكام",
+    "hero_chip": "منهج إنجلش إيزي",
+    "hero_title_default": "تعلم الإنجليزية بثقة وبدون تشتت",
+    "hero_subtitle_default": "كتب عملية، تمارين تفاعلية، ومسار واضح يرفع مستواك خطوة بخطوة.",
+    "hero_primary_cta_default": "ابدأ رحلتك الآن",
+    "hero_secondary_cta_default": "تصفح الكتب",
+    "hero_mascot_alt": "ماسكوت إنجلش إيزي",
+    "stat_books": "كتب تعليمية متخصصة",
+    "stat_vocab": "مفردة إنجليزية مختارة",
+    "stat_phrases": "جملة إنجليزية مترجمة",
+    "stat_levels": "مستويات تعلم",
+    "package_title": "ابدأ بخطة تعليم متكاملة",
+    "package_subtitle_default": "الباقة تجمع أفضل كتبنا في مسار واحد واضح للمبتدئ والمتوسط.",
+    "package_cta": "اشتر الباقة الآن",
+    "currency_sar": "ر.س",
+    "books_title": "مكتبة الكتب",
+    "books_subtitle": "تصفح جميع الكتب المتاحة وابدأ بالكتاب المناسب لمستواك.",
+    "books_cta": "عرض كل الكتب",
+    "footer_caption": "منصة عربية لتعلم الإنجليزية بوضوح واستمرارية."
+  }
+}

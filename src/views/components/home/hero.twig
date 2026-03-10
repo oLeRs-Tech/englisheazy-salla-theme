@@ -1,0 +1,23 @@
+{% set hero_title = theme.settings.get('hero_title') ?: trans('theme.hero_title_default') %}
+{% set hero_subtitle = theme.settings.get('hero_subtitle') ?: trans('theme.hero_subtitle_default') %}
+{% set cta_primary = theme.settings.get('hero_primary_cta_text') ?: trans('theme.hero_primary_cta_default') %}
+{% set cta_secondary = theme.settings.get('hero_secondary_cta_text') ?: trans('theme.hero_secondary_cta_default') %}
+
+<section class="ee-section ee-hero reveal-up">
+  <div class="ee-container ee-hero-grid">
+    <div class="ee-hero-copy">
+      <p class="ee-chip">{{ trans('theme.hero_chip') }}</p>
+      <h1 class="ee-hero-title">{{ hero_title }}</h1>
+      <p class="ee-hero-subtitle">{{ hero_subtitle }}</p>
+      <div class="ee-hero-actions">
+        <a href="{{ store.url ~ '/products' }}" class="ee-btn ee-btn-primary">{{ cta_primary }}</a>
+        <a href="{{ store.url ~ '/products' }}" class="ee-btn ee-btn-outline">{{ cta_secondary }}</a>
+      </div>
+    </div>
+    <div class="ee-hero-media">
+      <div class="ee-mascot-card">
+        <img src="{{ 'images/main-mascot.png' | asset }}" alt="{{ trans('theme.hero_mascot_alt') }}" class="ee-mascot-image">
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,26 @@
+{
+  "name": "englisheazy-salla-theme",
+  "version": "1.0.0",
+  "private": true,
+  "description": "EnglishEazy custom Salla theme",
+  "license": "MIT",
+  "scripts": {
+    "development": "webpack --mode development",
+    "watch": "webpack --mode development --watch",
+    "production": "webpack --mode production"
+  },
+  "devDependencies": {
+    "@salla.sa/twilight": "^2.14.374",
+    "autoprefixer": "^10.4.21",
+    "copy-webpack-plugin": "^13.0.1",
+    "css-loader": "^6.5.0",
+    "css-minimizer-webpack-plugin": "^7.0.2",
+    "glob": "^11.0.3",
+    "mini-css-extract-plugin": "^2.9.4",
+    "postcss": "^8.5.6",
+    "postcss-loader": "^8.2.0",
+    "postcss-preset-env": "^8.0.1",
+    "webpack": "^5.103.0",
+    "webpack-cli": "^5.0.1"
+  }
+}

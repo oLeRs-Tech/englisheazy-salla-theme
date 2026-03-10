@@ -1,0 +1,29 @@
+{
+  "theme": {
+    "brand_name": "EnglishEazy",
+    "menu_home": "Home",
+    "menu_books": "Books",
+    "menu_package": "The Z Package",
+    "menu_contact": "Contact",
+    "menu_privacy": "Privacy",
+    "menu_terms": "Terms",
+    "hero_chip": "EnglishEazy Method",
+    "hero_title_default": "Learn English with confidence",
+    "hero_subtitle_default": "Practical books, interactive exercises, and a clear path to real progress.",
+    "hero_primary_cta_default": "Start now",
+    "hero_secondary_cta_default": "Browse books",
+    "hero_mascot_alt": "EnglishEazy mascot",
+    "stat_books": "Specialized books",
+    "stat_vocab": "Curated vocabulary terms",
+    "stat_phrases": "Ready-to-use English phrases",
+    "stat_levels": "Learning levels",
+    "package_title": "Start with a complete learning plan",
+    "package_subtitle_default": "The package combines our best books in one focused learning system.",
+    "package_cta": "Buy package now",
+    "currency_sar": "SAR",
+    "books_title": "Books Library",
+    "books_subtitle": "Explore all available books and pick the right one for your level.",
+    "books_cta": "View all books",
+    "footer_caption": "An Arabic-first platform for focused and consistent English learning."
+  }
+}

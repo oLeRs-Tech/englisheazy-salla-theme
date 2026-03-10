@@ -1,0 +1,13 @@
+<footer class="ee-footer">
+  <div class="ee-container ee-footer-inner">
+    <div class="ee-footer-brand">
+      <strong>{{ store.name ?: trans('theme.brand_name') }}</strong>
+      <p>{{ trans('theme.footer_caption') }}</p>
+    </div>
+    <div class="ee-footer-links">
+      <a href="{{ store.url ~ '/pages/privacy-policy' }}">{{ trans('theme.menu_privacy') }}</a>
+      <a href="{{ store.url ~ '/pages/terms-and-conditions' }}">{{ trans('theme.menu_terms') }}</a>
+      <a href="{{ store.url ~ '/contact-us' }}">{{ trans('theme.menu_contact') }}</a>
+    </div>
+  </div>
+</footer>

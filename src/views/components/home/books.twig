@@ -1,0 +1,14 @@
+<section class="ee-section ee-books reveal-up">
+  <div class="ee-container">
+    <header class="ee-section-head">
+      <h2>{{ trans('theme.books_title') }}</h2>
+      <p>{{ trans('theme.books_subtitle') }}</p>
+    </header>
+    <div class="ee-books-slider">
+      <salla-products-slider source="latest" limit="6"></salla-products-slider>
+    </div>
+    <div class="ee-center">
+      <a href="{{ store.url ~ '/products' }}" class="ee-btn ee-btn-outline">{{ trans('theme.books_cta') }}</a>
+    </div>
+  </div>
+</section>

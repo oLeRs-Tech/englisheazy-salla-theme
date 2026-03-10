@@ -1,0 +1,93 @@
+{
+  "name": {
+    "ar": "إنجلش إيزي",
+    "en": "EnglishEazy"
+  },
+  "repository": "https://github.com/oLeRs-Tech/englisheazy-salla-theme",
+  "author_email": "support@englisheazy.com",
+  "version": "1.0.0",
+  "theme_name": "EnglishEazy",
+  "repo_url": "https://github.com/oLeRs-Tech/englisheazy-salla-theme",
+  "support_url": "https://englisheazy.com",
+  "features": [
+    "component-main-links",
+    "component-featured-products"
+  ],
+  "settings": [
+    {
+      "type": "string",
+      "label": "Hero title",
+      "id": "hero_title",
+      "format": "text",
+      "value": "Learn English with confidence and focus"
+    },
+    {
+      "type": "string",
+      "label": "Hero subtitle",
+      "id": "hero_subtitle",
+      "format": "textarea",
+      "value": "Practical books, interactive tests, and a clear path to real progress."
+    },
+    {
+      "type": "string",
+      "label": "Primary button text",
+      "id": "hero_primary_cta_text",
+      "format": "text",
+      "value": "Start now"
+    },
+    {
+      "type": "string",
+      "label": "Secondary button text",
+      "id": "hero_secondary_cta_text",
+      "format": "text",
+      "value": "Browse books"
+    },
+    {
+      "type": "string",
+      "label": "Package section title",
+      "id": "package_title",
+      "format": "text",
+      "value": "The Z Package"
+    },
+    {
+      "type": "string",
+      "label": "Package section subtitle",
+      "id": "package_subtitle",
+      "format": "textarea",
+      "value": "A complete 6-book system that covers all core English skills."
+    },
+    {
+      "type": "string",
+      "label": "Package price",
+      "id": "package_price",
+      "format": "text",
+      "value": "149"
+    }
+  ],
+  "components": [
+    {
+      "name": "header",
+      "path": "src/views/components/header/header.twig"
+    },
+    {
+      "name": "footer",
+      "path": "src/views/components/footer/footer.twig"
+    },
+    {
+      "name": "home.hero",
+      "path": "src/views/components/home/hero.twig"
+    },
+    {
+      "name": "home.stats",
+      "path": "src/views/components/home/stats.twig"
+    },
+    {
+      "name": "home.package",
+      "path": "src/views/components/home/package.twig"
+    },
+    {
+      "name": "home.books",
+      "path": "src/views/components/home/books.twig"
+    }
+  ]
+}
