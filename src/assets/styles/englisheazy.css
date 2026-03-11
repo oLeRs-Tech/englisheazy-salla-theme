@@ -143,6 +143,56 @@ body.ee-body {
   font-size: 0.93rem;
 }
 
+/* Salla built-in add-to-cart button override */
+.s-product-card-entry salla-add-product-button .s-button-btn,
+.s-product-card-entry .btn--add-to-cart,
+.s-products-slider-content salla-add-product-button .s-button-btn,
+.s-products-slider-content .btn--add-to-cart {
+  min-height: 52px !important;
+  border: 2px solid #e7b89f !important;
+  border-radius: 18px !important;
+  background: #fff !important;
+  color: #e09068 !important;
+  font-weight: 800 !important;
+  box-shadow: 0 5px 0 #d9d9d9 !important;
+  transition: transform 0.18s ease, border-color 0.18s ease, color 0.18s ease, box-shadow 0.18s ease !important;
+}
+
+.s-product-card-entry salla-add-product-button .s-button-btn:hover,
+.s-product-card-entry .btn--add-to-cart:hover,
+.s-products-slider-content salla-add-product-button .s-button-btn:hover,
+.s-products-slider-content .btn--add-to-cart:hover {
+  color: #d68055 !important;
+  border-color: #de9d7d !important;
+  transform: translateY(-1px);
+}
+
+.s-product-card-entry salla-add-product-button .s-button-btn:active,
+.s-product-card-entry .btn--add-to-cart:active,
+.s-products-slider-content salla-add-product-button .s-button-btn:active,
+.s-products-slider-content .btn--add-to-cart:active {
+  transform: translateY(2px);
+  box-shadow: 0 2px 0 #d9d9d9 !important;
+}
+
+.s-product-card-entry salla-add-product-button .s-button-btn .s-button-text,
+.s-product-card-entry .btn--add-to-cart .s-button-text,
+.s-products-slider-content salla-add-product-button .s-button-btn .s-button-text,
+.s-products-slider-content .btn--add-to-cart .s-button-text {
+  color: inherit !important;
+  font-weight: 800 !important;
+}
+
+.s-product-card-entry salla-add-product-button .s-button-btn:disabled,
+.s-product-card-entry .btn--add-to-cart:disabled,
+.s-products-slider-content salla-add-product-button .s-button-btn:disabled,
+.s-products-slider-content .btn--add-to-cart:disabled {
+  color: #b8b8b8 !important;
+  border-color: #ece5e1 !important;
+  box-shadow: 0 4px 0 #ececec !important;
+  background: #fff !important;
+}
+
 .ee-header {
   position: sticky;
   top: 0;
