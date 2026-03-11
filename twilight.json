@@ -1,6 +1,6 @@
-﻿{
+{
   "name": {
-    "ar": "EnglishEazy",
+    "ar": "إنجلش إيزي",
     "en": "EnglishEazy"
   },
   "repository": "https://github.com/oLeRs-Tech/englisheazy-salla-theme",
@@ -66,28 +66,72 @@
   ],
   "components": [
     {
-      "name": "header",
-      "path": "src/views/components/header/header.twig"
+      "key": "d5ba7cf0-df5a-4e87-90ca-bf00753ccdd1",
+      "title": {
+        "ar": "قسم الهيرو",
+        "en": "Hero section"
+      },
+      "icon": "sicon-image",
+      "path": "home.hero",
+      "fields": [
+        {
+          "type": "static",
+          "format": "description",
+          "id": "hero-preview",
+          "value": "<div style='padding:8px 0'>Main hero area with headline and CTA buttons.</div>"
+        }
+      ]
     },
     {
-      "name": "footer",
-      "path": "src/views/components/footer/footer.twig"
+      "key": "f006f8ef-a390-4f0a-a5f9-c511c38b6c9a",
+      "title": {
+        "ar": "قسم الإحصائيات",
+        "en": "Stats section"
+      },
+      "icon": "sicon-chart-bar",
+      "path": "home.stats",
+      "fields": [
+        {
+          "type": "static",
+          "format": "description",
+          "id": "stats-preview",
+          "value": "<div style='padding:8px 0'>Showcase quick platform stats and learning highlights.</div>"
+        }
+      ]
     },
     {
-      "name": "home.hero",
-      "path": "src/views/components/home/hero.twig"
+      "key": "36aca507-1e78-4ea1-ab3e-a9d0e40cc31e",
+      "title": {
+        "ar": "قسم الباقة",
+        "en": "Package section"
+      },
+      "icon": "sicon-box",
+      "path": "home.package",
+      "fields": [
+        {
+          "type": "static",
+          "format": "description",
+          "id": "package-preview",
+          "value": "<div style='padding:8px 0'>Highlight The Z Package with pricing and CTA.</div>"
+        }
+      ]
     },
     {
-      "name": "home.stats",
-      "path": "src/views/components/home/stats.twig"
-    },
-    {
-      "name": "home.package",
-      "path": "src/views/components/home/package.twig"
-    },
-    {
-      "name": "home.books",
-      "path": "src/views/components/home/books.twig"
+      "key": "922be0c7-870d-40ea-a4fe-a52fba8389fc",
+      "title": {
+        "ar": "قسم الكتب",
+        "en": "Books section"
+      },
+      "icon": "sicon-book-open",
+      "path": "home.books",
+      "fields": [
+        {
+          "type": "static",
+          "format": "description",
+          "id": "books-preview",
+          "value": "<div style='padding:8px 0'>Product slider section for your latest books.</div>"
+        }
+      ]
     }
   ]
 }

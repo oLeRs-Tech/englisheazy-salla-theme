@@ -16,11 +16,11 @@
 <body id="app" class="ee-body {% hook 'body:classes' %}">
   {% hook 'body:start' %}
   <div class="ee-bg-pattern"></div>
-  {% component 'header' %}
+  {% component 'header.header' %}
   <main id="main-content" class="ee-main" role="main">
     {% block content %}{% endblock %}
   </main>
-  {% component 'footer' %}
+  {% component 'footer.footer' %}
   {% hook 'body:end' %}
   <script defer crossorigin="anonymous" src="{{ 'app.js' | asset }}"></script>
 </body>
