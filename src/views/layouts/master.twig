@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="{{ locale.code }}" dir="{{ locale.code == 'ar' ? 'rtl' : 'ltr' }}" class="no-js">
+<html lang="{{ user.language.code }}" dir="{{ user.language.dir }}" class="no-js">
 <head>
   {% hook 'head:start' %}
   <meta charset="UTF-8">
@@ -9,10 +9,11 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=Manrope:wght@500;700;800&display=swap" rel="stylesheet">
+  {% hook head %}
   <link rel="stylesheet" href="{{ 'app.css' | asset }}">
-  {% hook 'head' %}
+  {% hook 'head:end' %}
 </head>
-<body class="ee-body">
+<body id="app" class="ee-body {% hook 'body:classes' %}">
   {% hook 'body:start' %}
   <div class="ee-bg-pattern"></div>
   {% component 'header' %}
@@ -20,7 +21,7 @@
     {% block content %}{% endblock %}
   </main>
   {% component 'footer' %}
-  <script defer src="{{ 'app.js' | asset }}"></script>
-  {% hook 'body' %}
+  {% hook 'body:end' %}
+  <script defer crossorigin="anonymous" src="{{ 'app.js' | asset }}"></script>
 </body>
 </html>
