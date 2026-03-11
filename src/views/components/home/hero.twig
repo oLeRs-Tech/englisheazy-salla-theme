@@ -1,7 +1,10 @@
-{% set hero_title = theme.settings.get('hero_title') ?: trans('theme.hero_title_default') %}
-{% set hero_subtitle = theme.settings.get('hero_subtitle') ?: trans('theme.hero_subtitle_default') %}
-{% set cta_primary = theme.settings.get('hero_primary_cta_text') ?: trans('theme.hero_primary_cta_default') %}
-{% set cta_secondary = theme.settings.get('hero_secondary_cta_text') ?: trans('theme.hero_secondary_cta_default') %}
+{% set hero_title = component.title ?: trans('theme.hero_title_default') %}
+{% set hero_subtitle = component.subtitle ?: trans('theme.hero_subtitle_default') %}
+{% set cta_primary = component.primary_cta_text ?: trans('theme.hero_primary_cta_default') %}
+{% set cta_primary_url = component.primary_cta_url ?: '/products' %}
+{% set cta_secondary = component.secondary_cta_text ?: trans('theme.hero_secondary_cta_default') %}
+{% set cta_secondary_url = component.secondary_cta_url ?: '/products' %}
+{% set mascot_image = component.mascot_image ?: ('images/main-mascot.png' | asset) %}
 
 <section class="ee-section ee-hero reveal-up">
   <div class="ee-container ee-hero-grid">
@@ -10,13 +13,13 @@
       <h1 class="ee-hero-title">{{ hero_title }}</h1>
       <p class="ee-hero-subtitle">{{ hero_subtitle }}</p>
       <div class="ee-hero-actions">
-        <a href="{{ store.url ~ '/products' }}" class="ee-btn ee-btn-primary">{{ cta_primary }}</a>
-        <a href="{{ store.url ~ '/products' }}" class="ee-btn ee-btn-outline">{{ cta_secondary }}</a>
+        <a href="{{ cta_primary_url }}" class="ee-btn ee-btn-primary">{{ cta_primary }}</a>
+        <a href="{{ cta_secondary_url }}" class="ee-btn ee-btn-outline">{{ cta_secondary }}</a>
       </div>
     </div>
     <div class="ee-hero-media">
       <div class="ee-mascot-card">
-        <img src="{{ 'images/main-mascot.png' | asset }}" alt="{{ trans('theme.hero_mascot_alt') }}" class="ee-mascot-image">
+        <img src="{{ mascot_image }}" alt="{{ trans('theme.hero_mascot_alt') }}" class="ee-mascot-image">
       </div>
     </div>
   </div>

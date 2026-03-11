@@ -1,14 +1,41 @@
 <section class="ee-section ee-books reveal-up">
   <div class="ee-container">
     <header class="ee-section-head">
-      <h2>{{ trans('theme.books_title') }}</h2>
-      <p>{{ trans('theme.books_subtitle') }}</p>
+      <h2>{{ component.title ?: trans('theme.books_title') }}</h2>
+      <p>{{ component.subtitle ?: trans('theme.books_subtitle') }}</p>
     </header>
-    <div class="ee-books-slider">
-      <salla-products-slider source="latest" limit="6"></salla-products-slider>
-    </div>
-    <div class="ee-center">
-      <a href="{{ store.url ~ '/products' }}" class="ee-btn ee-btn-outline">{{ trans('theme.books_cta') }}</a>
+    <div class="ee-books-grid">
+      {% for book in component.items %}
+        {% set book_title = book.title ?: trans('theme.book_default_title') %}
+        {% set book_description = book.description ?: trans('theme.book_default_description') %}
+        {% set book_price = book.price ?: '29' %}
+        {% set book_button_text = book.button_text ?: trans('theme.book_default_button') %}
+        {% set book_url = book.url ?: '/products' %}
+        {% set book_image = book.image ?: ('images/logo-z.png' | asset) %}
+        <article class="ee-book-card">
+          <div class="ee-book-cover-wrap">
+            <img src="{{ book_image }}" alt="{{ book_title }}" class="ee-book-cover" loading="lazy">
+          </div>
+          <div class="ee-book-content">
+            <h3 class="ee-book-title">{{ book_title }}</h3>
+            <p class="ee-book-description">{{ book_description }}</p>
+            <div class="ee-book-footer">
+              <div class="ee-book-price">
+                <span>{{ trans('theme.currency_sar') }}</span>
+                <strong>{{ book_price }}</strong>
+              </div>
+              <a href="{{ book_url }}" class="ee-btn ee-btn-primary ee-btn-sm">{{ book_button_text }}</a>
+            </div>
+          </div>
+        </article>
+      {% else %}
+        <article class="ee-book-card ee-book-card-empty">
+          <div class="ee-book-content">
+            <h3 class="ee-book-title">{{ trans('theme.books_empty_title') }}</h3>
+            <p class="ee-book-description">{{ trans('theme.books_empty_description') }}</p>
+          </div>
+        </article>
+      {% endfor %}
     </div>
   </div>
 </section>

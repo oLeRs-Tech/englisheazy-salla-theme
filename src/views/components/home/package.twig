@@ -1,19 +1,22 @@
-{% set package_title = theme.settings.get('package_title') ?: 'The Z Package' %}
-{% set package_subtitle = theme.settings.get('package_subtitle') ?: trans('theme.package_subtitle_default') %}
-{% set package_price = theme.settings.get('package_price') ?: '149' %}
+{% set package_badge = component.badge ?: 'The Z Package' %}
+{% set package_title = component.title ?: trans('theme.package_title') %}
+{% set package_subtitle = component.subtitle ?: trans('theme.package_subtitle_default') %}
+{% set package_price = component.price ?: '149' %}
+{% set package_cta_text = component.cta_text ?: trans('theme.package_cta') %}
+{% set package_cta_url = component.cta_url ?: '/products' %}
 
 <section class="ee-section ee-package reveal-up">
   <div class="ee-container">
     <article class="ee-card ee-package-card">
       <div class="ee-package-copy">
-        <p class="ee-chip ee-chip-dark">{{ package_title }}</p>
-        <h2>{{ trans('theme.package_title') }}</h2>
+        <p class="ee-chip ee-chip-dark">{{ package_badge }}</p>
+        <h2>{{ package_title }}</h2>
         <p>{{ package_subtitle }}</p>
         <div class="ee-package-price">
           <span class="ee-price-currency">{{ trans('theme.currency_sar') }}</span>
           <strong>{{ package_price }}</strong>
         </div>
-        <a href="{{ store.url ~ '/products' }}" class="ee-btn ee-btn-primary">{{ trans('theme.package_cta') }}</a>
+        <a href="{{ package_cta_url }}" class="ee-btn ee-btn-primary">{{ package_cta_text }}</a>
       </div>
       <div class="ee-package-books">
         <div class="ee-mini-book"></div>

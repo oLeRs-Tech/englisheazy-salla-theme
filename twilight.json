@@ -5,131 +5,337 @@
   },
   "repository": "https://github.com/oLeRs-Tech/englisheazy-salla-theme",
   "author_email": "support@englisheazy.com",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "theme_name": "EnglishEazy",
   "repo_url": "https://github.com/oLeRs-Tech/englisheazy-salla-theme",
   "support_url": "https://englisheazy.com",
+  "description": {
+    "ar": "ثيم متجر EnglishEazy بتصميم متناسق مع المنصة الرئيسية.",
+    "en": "EnglishEazy storefront theme aligned with the main platform design."
+  },
   "features": [
-    "component-main-links",
-    "component-featured-products"
+    "fonts",
+    "color"
   ],
-  "settings": [
-    {
-      "type": "string",
-      "label": "Hero title",
-      "id": "hero_title",
-      "format": "text",
-      "value": "Learn English with confidence and focus"
-    },
-    {
-      "type": "string",
-      "label": "Hero subtitle",
-      "id": "hero_subtitle",
-      "format": "textarea",
-      "value": "Practical books, interactive tests, and a clear path to real progress."
-    },
-    {
-      "type": "string",
-      "label": "Primary button text",
-      "id": "hero_primary_cta_text",
-      "format": "text",
-      "value": "Start now"
-    },
-    {
-      "type": "string",
-      "label": "Secondary button text",
-      "id": "hero_secondary_cta_text",
-      "format": "text",
-      "value": "Browse books"
-    },
-    {
-      "type": "string",
-      "label": "Package section title",
-      "id": "package_title",
-      "format": "text",
-      "value": "The Z Package"
-    },
-    {
-      "type": "string",
-      "label": "Package section subtitle",
-      "id": "package_subtitle",
-      "format": "textarea",
-      "value": "A complete 6-book system that covers all core English skills."
-    },
-    {
-      "type": "string",
-      "label": "Package price",
-      "id": "package_price",
-      "format": "text",
-      "value": "149"
-    }
-  ],
+  "settings": [],
   "components": [
     {
-      "key": "d5ba7cf0-df5a-4e87-90ca-bf00753ccdd1",
-      "title": {
-        "ar": "قسم الهيرو",
-        "en": "Hero section"
-      },
+      "name": "hero",
+      "title": "Hero Section",
       "icon": "sicon-image",
       "path": "home.hero",
       "fields": [
         {
-          "type": "static",
-          "format": "description",
-          "id": "hero-preview",
-          "value": "<div style='padding:8px 0'>Main hero area with headline and CTA buttons.</div>"
+          "id": "title",
+          "type": "string",
+          "format": "text",
+          "label": "Hero title",
+          "multilanguage": true,
+          "value": {
+            "ar": "تعلم الإنجليزية بثقة وبدون تشتت",
+            "en": "Learn English with confidence and focus"
+          }
+        },
+        {
+          "id": "subtitle",
+          "type": "string",
+          "format": "textarea",
+          "label": "Hero subtitle",
+          "multilanguage": true,
+          "value": {
+            "ar": "كتب عملية وتمارين واضحة تساعدك تبني لغتك خطوة بخطوة.",
+            "en": "Practical books and focused exercises to build your English step by step."
+          }
+        },
+        {
+          "id": "primary_cta_text",
+          "type": "string",
+          "format": "text",
+          "label": "Primary button text",
+          "multilanguage": true,
+          "value": {
+            "ar": "تصفح الكتب",
+            "en": "Browse books"
+          }
+        },
+        {
+          "id": "primary_cta_url",
+          "type": "string",
+          "format": "text",
+          "label": "Primary button URL",
+          "value": "/products"
+        },
+        {
+          "id": "secondary_cta_text",
+          "type": "string",
+          "format": "text",
+          "label": "Secondary button text",
+          "multilanguage": true,
+          "value": {
+            "ar": "اطلب الباقة",
+            "en": "Get The Z Package"
+          }
+        },
+        {
+          "id": "secondary_cta_url",
+          "type": "string",
+          "format": "text",
+          "label": "Secondary button URL",
+          "value": "/products"
+        },
+        {
+          "id": "mascot_image",
+          "type": "string",
+          "format": "image",
+          "label": "Hero mascot image"
         }
       ]
     },
     {
-      "key": "f006f8ef-a390-4f0a-a5f9-c511c38b6c9a",
-      "title": {
-        "ar": "قسم الإحصائيات",
-        "en": "Stats section"
-      },
+      "name": "stats",
+      "title": "Stats Section",
       "icon": "sicon-chart-bar",
       "path": "home.stats",
       "fields": [
         {
-          "type": "static",
-          "format": "description",
-          "id": "stats-preview",
-          "value": "<div style='padding:8px 0'>Showcase quick platform stats and learning highlights.</div>"
+          "id": "stat_books_value",
+          "type": "string",
+          "format": "text",
+          "label": "Books value",
+          "value": "6"
+        },
+        {
+          "id": "stat_books_label",
+          "type": "string",
+          "format": "text",
+          "label": "Books label",
+          "multilanguage": true,
+          "value": {
+            "ar": "كتب متخصصة",
+            "en": "Specialized Books"
+          }
+        },
+        {
+          "id": "stat_vocab_value",
+          "type": "string",
+          "format": "text",
+          "label": "Vocabulary value",
+          "value": "1000+"
+        },
+        {
+          "id": "stat_vocab_label",
+          "type": "string",
+          "format": "text",
+          "label": "Vocabulary label",
+          "multilanguage": true,
+          "value": {
+            "ar": "مفردة مختارة",
+            "en": "Curated Terms"
+          }
+        },
+        {
+          "id": "stat_phrases_value",
+          "type": "string",
+          "format": "text",
+          "label": "Phrases value",
+          "value": "700+"
+        },
+        {
+          "id": "stat_phrases_label",
+          "type": "string",
+          "format": "text",
+          "label": "Phrases label",
+          "multilanguage": true,
+          "value": {
+            "ar": "جملة جاهزة",
+            "en": "Ready Phrases"
+          }
+        },
+        {
+          "id": "stat_levels_value",
+          "type": "string",
+          "format": "text",
+          "label": "Levels value",
+          "value": "A1-C2"
+        },
+        {
+          "id": "stat_levels_label",
+          "type": "string",
+          "format": "text",
+          "label": "Levels label",
+          "multilanguage": true,
+          "value": {
+            "ar": "مستويات تعلم",
+            "en": "Learning Levels"
+          }
         }
       ]
     },
     {
-      "key": "36aca507-1e78-4ea1-ab3e-a9d0e40cc31e",
-      "title": {
-        "ar": "قسم الباقة",
-        "en": "Package section"
-      },
+      "name": "package",
+      "title": "Package Section",
       "icon": "sicon-box",
       "path": "home.package",
       "fields": [
         {
-          "type": "static",
-          "format": "description",
-          "id": "package-preview",
-          "value": "<div style='padding:8px 0'>Highlight The Z Package with pricing and CTA.</div>"
+          "id": "badge",
+          "type": "string",
+          "format": "text",
+          "label": "Badge text",
+          "value": "The Z Package"
+        },
+        {
+          "id": "title",
+          "type": "string",
+          "format": "text",
+          "label": "Package title",
+          "multilanguage": true,
+          "value": {
+            "ar": "ابدأ بخطة تعليم متكاملة",
+            "en": "Start with a complete learning plan"
+          }
+        },
+        {
+          "id": "subtitle",
+          "type": "string",
+          "format": "textarea",
+          "label": "Package subtitle",
+          "multilanguage": true,
+          "value": {
+            "ar": "مجموعة كتب متكاملة تغطي أساسيات اللغة الإنجليزية بأسلوب عملي.",
+            "en": "A complete book bundle that covers core English skills with practical learning."
+          }
+        },
+        {
+          "id": "price",
+          "type": "string",
+          "format": "text",
+          "label": "Package price",
+          "value": "149"
+        },
+        {
+          "id": "cta_text",
+          "type": "string",
+          "format": "text",
+          "label": "Package button text",
+          "multilanguage": true,
+          "value": {
+            "ar": "اشتر الآن",
+            "en": "Buy now"
+          }
+        },
+        {
+          "id": "cta_url",
+          "type": "string",
+          "format": "text",
+          "label": "Package button URL",
+          "value": "/products"
         }
       ]
     },
     {
-      "key": "922be0c7-870d-40ea-a4fe-a52fba8389fc",
-      "title": {
-        "ar": "قسم الكتب",
-        "en": "Books section"
-      },
+      "name": "books",
+      "title": "Books Grid",
       "icon": "sicon-book-open",
       "path": "home.books",
       "fields": [
         {
-          "type": "static",
-          "format": "description",
-          "id": "books-preview",
-          "value": "<div style='padding:8px 0'>Product slider section for your latest books.</div>"
+          "id": "title",
+          "type": "string",
+          "format": "text",
+          "label": "Books title",
+          "multilanguage": true,
+          "value": {
+            "ar": "مكتبة كتب إنجلش إيزي",
+            "en": "EnglishEazy Books"
+          }
+        },
+        {
+          "id": "subtitle",
+          "type": "string",
+          "format": "textarea",
+          "label": "Books subtitle",
+          "multilanguage": true,
+          "value": {
+            "ar": "اعرض الكتب بالطريقة التي تناسب متجرك مع صور ووصف وسعر لكل كتاب.",
+            "en": "Show books with image, title, description, and price in a branded layout."
+          }
+        },
+        {
+          "id": "items",
+          "type": "collection",
+          "format": "collection",
+          "label": "Books",
+          "item_label": "Book",
+          "required": true,
+          "minLength": 1,
+          "maxLength": 12,
+          "value": [
+            {
+              "items.title": "THE Z BOOK - الكتاب الأساسي",
+              "items.description": "كتاب تأسيسي يساعدك تتعلم الإنجليزية بطريقة واضحة وعملية.",
+              "items.price": "49",
+              "items.button_text": "التفاصيل",
+              "items.url": "/products",
+              "items.image": ""
+            },
+            {
+              "items.title": "THE Z GRAMMAR - كتاب القواعد",
+              "items.description": "شرح مبسط لأهم قواعد الإنجليزية مع أمثلة تطبيقية.",
+              "items.price": "29",
+              "items.button_text": "التفاصيل",
+              "items.url": "/products",
+              "items.image": ""
+            }
+          ],
+          "fields": [
+            {
+              "id": "items.title",
+              "type": "string",
+              "format": "text",
+              "label": "Book title",
+              "multilanguage": true,
+              "required": true
+            },
+            {
+              "id": "items.description",
+              "type": "string",
+              "format": "textarea",
+              "label": "Book description",
+              "multilanguage": true
+            },
+            {
+              "id": "items.price",
+              "type": "string",
+              "format": "text",
+              "label": "Book price",
+              "required": true
+            },
+            {
+              "id": "items.button_text",
+              "type": "string",
+              "format": "text",
+              "label": "Button text",
+              "multilanguage": true,
+              "value": {
+                "ar": "التفاصيل",
+                "en": "Details"
+              }
+            },
+            {
+              "id": "items.url",
+              "type": "string",
+              "format": "text",
+              "label": "Book URL",
+              "required": true
+            },
+            {
+              "id": "items.image",
+              "type": "string",
+              "format": "image",
+              "label": "Book cover image"
+            }
+          ]
         }
       ]
     }
