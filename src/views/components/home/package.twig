@@ -1,9 +1,9 @@
-{% set package_badge = component.badge ?: 'The Z Package' %}
-{% set package_title = component.title ?: trans('theme.package_title') %}
-{% set package_subtitle = component.subtitle ?: trans('theme.package_subtitle_default') %}
-{% set package_price = component.price ?: '149' %}
-{% set package_cta_text = component.cta_text ?: trans('theme.package_cta') %}
-{% set package_cta_url = component.cta_url ?: '/products' %}
+{% set package_badge = theme.settings.get('package_badge') ?: 'The Z Package' %}
+{% set package_title = theme.settings.get('package_title') ?: trans('theme.package_title') %}
+{% set package_subtitle = theme.settings.get('package_subtitle') ?: trans('theme.package_subtitle_default') %}
+{% set package_price = theme.settings.get('package_price') ?: '149' %}
+{% set package_cta_text = theme.settings.get('package_cta_text') ?: trans('theme.package_cta') %}
+{% set package_cta_url = theme.settings.get('package_cta_url') ?: '/products' %}
 
 <section class="ee-section ee-package reveal-up">
   <div class="ee-container">

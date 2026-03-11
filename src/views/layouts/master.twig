@@ -4,30 +4,42 @@
   {% hook 'head:start' %}
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#F0A786">
+  <meta name="theme-color" content="#f0a786">
   <title>{{ title ? title ~ ' | ' ~ store.name : store.name }}</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=Manrope:wght@500;700;800&display=swap" rel="stylesheet">
   {% hook head %}
   <link rel="stylesheet" href="{{ 'app.css' | asset }}">
+  {% if theme.font.path %}
+    <link rel="stylesheet" href="{{ theme.font.path | cdn }}">
+  {% endif %}
   <style>
-    /* Fallback styles in case asset loading is delayed in preview */
-    .ee-logo { width: 42px; height: 42px; object-fit: contain; }
-    .ee-header-inner { display: flex; align-items: center; justify-content: space-between; }
-    .ee-nav { display: flex; gap: .5rem; }
-    .ee-nav a { text-decoration: none; }
+    /* Critical fallback for Salla editor preview when compiled CSS is delayed */
+    .ee-body{margin:0;background:#fbfbfb;color:#363c42;font-family:"Cairo",sans-serif}
+    .ee-header{position:sticky;top:0;background:#fff;border-bottom:1px solid #e9e4df;z-index:20}
+    .ee-header-inner{display:flex;align-items:center;justify-content:space-between;gap:1rem;min-height:72px}
+    .ee-container{width:min(1160px,calc(100vw - 2rem));margin-inline:auto}
+    .ee-logo{width:42px;height:42px;object-fit:contain;border-radius:12px}
+    .ee-logo-wrap{display:flex;align-items:center;gap:.6rem;text-decoration:none}
+    .ee-logo-text{color:#363c42;font-weight:800}
+    .ee-nav{display:flex;gap:.35rem}
+    .ee-nav-link{padding:.42rem .78rem;border-radius:999px;text-decoration:none;color:#363c42}
+    .ee-main{padding:1rem 0 2.2rem}
+    .ee-footer{border-top:1px solid #ece6e2;padding:1rem 0}
+    img{max-width:100%}
   </style>
+  {% block head_styles %}{% endblock %}
   {% hook 'head:end' %}
 </head>
 <body id="app" class="ee-body {% hook 'body:classes' %}">
   {% hook 'body:start' %}
-  <div class="ee-bg-pattern"></div>
-  {% component 'header.header' %}
+  <div class="ee-bg-pattern" aria-hidden="true"></div>
+  {% component 'header' %}
   <main id="main-content" class="ee-main" role="main">
     {% block content %}{% endblock %}
   </main>
-  {% component 'footer.footer' %}
+  {% component 'footer' %}
   {% hook 'body:end' %}
   <script defer crossorigin="anonymous" src="{{ 'app.js' | asset }}"></script>
 </body>

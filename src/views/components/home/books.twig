@@ -1,11 +1,44 @@
+{% set section_title = theme.settings.get('books_section_title') ?: trans('theme.books_title') %}
+{% set section_subtitle = theme.settings.get('books_section_subtitle') ?: trans('theme.books_subtitle') %}
+{% set books = theme.settings.get('books_collection', []) %}
+
+{% if not books %}
+  {% set books = [
+    {
+      'title': 'THE Z BOOK - الكتاب الأساسي',
+      'description': 'منهج متكامل يساعدك تتعلم الإنجليزية في المهارات الأربع بأسلوب عملي.',
+      'price': '49',
+      'button_text': trans('theme.book_default_button'),
+      'url': '/products',
+      'image': 'https://i.ibb.co/5g9cjZV9/The-Zbook-New-Cover.png'
+    },
+    {
+      'title': 'THE Z GRAMMAR - كتاب القواعد',
+      'description': 'شرح مبسط ومباشر لأهم قواعد الإنجليزية مع أمثلة سهلة التطبيق.',
+      'price': '29',
+      'button_text': trans('theme.book_default_button'),
+      'url': '/products',
+      'image': 'https://i.ibb.co/mVVWy3w8/image.png'
+    },
+    {
+      'title': 'THE Z VOCABULARY - كتاب الكلمات',
+      'description': 'مفردات مترجمة في مواضيع يومية لبناء حصيلتك اللغوية بسرعة.',
+      'price': '29',
+      'button_text': trans('theme.book_default_button'),
+      'url': '/products',
+      'image': 'https://i.ibb.co/6cjcyqfK/image.png'
+    }
+  ] %}
+{% endif %}
+
 <section class="ee-section ee-books reveal-up">
   <div class="ee-container">
     <header class="ee-section-head">
-      <h2>{{ component.title ?: trans('theme.books_title') }}</h2>
-      <p>{{ component.subtitle ?: trans('theme.books_subtitle') }}</p>
+      <h2>{{ section_title }}</h2>
+      <p>{{ section_subtitle }}</p>
     </header>
     <div class="ee-books-grid">
-      {% for book in component.books %}
+      {% for book in books %}
         {% set book_title = book.title ?: trans('theme.book_default_title') %}
         {% set book_description = book.description ?: trans('theme.book_default_description') %}
         {% set book_price = book.price ?: '29' %}
@@ -26,13 +59,6 @@
               </div>
               <a href="{{ book_url }}" class="ee-btn ee-btn-primary ee-btn-sm">{{ book_button_text }}</a>
             </div>
-          </div>
-        </article>
-      {% else %}
-        <article class="ee-book-card ee-book-card-empty">
-          <div class="ee-book-content">
-            <h3 class="ee-book-title">{{ trans('theme.books_empty_title') }}</h3>
-            <p class="ee-book-description">{{ trans('theme.books_empty_description') }}</p>
           </div>
         </article>
       {% endfor %}

@@ -1,16 +1,21 @@
-{% set hero_title = component.title ?: trans('theme.hero_title_default') %}
-{% set hero_subtitle = component.subtitle ?: trans('theme.hero_subtitle_default') %}
-{% set cta_primary = component.primary_cta_text ?: trans('theme.hero_primary_cta_default') %}
-{% set cta_primary_url = component.primary_cta_url ?: '/products' %}
-{% set cta_secondary = component.secondary_cta_text ?: trans('theme.hero_secondary_cta_default') %}
-{% set cta_secondary_url = component.secondary_cta_url ?: '/products' %}
-{% set mascot_image = component.image ?: ('images/main-mascot.png' | asset) %}
+{% set hero_badge = theme.settings.get('hero_badge') ?: trans('theme.hero_chip') %}
+{% set hero_title_main = theme.settings.get('hero_title_main') ?: trans('theme.hero_title_default') %}
+{% set hero_title_highlight = theme.settings.get('hero_title_highlight') ?: trans('theme.hero_title_highlight_default') %}
+{% set hero_subtitle = theme.settings.get('hero_subtitle') ?: trans('theme.hero_subtitle_default') %}
+{% set cta_primary = theme.settings.get('hero_primary_cta_text') ?: trans('theme.hero_primary_cta_default') %}
+{% set cta_primary_url = theme.settings.get('hero_primary_cta_url') ?: '/products' %}
+{% set cta_secondary = theme.settings.get('hero_secondary_cta_text') ?: trans('theme.hero_secondary_cta_default') %}
+{% set cta_secondary_url = theme.settings.get('hero_secondary_cta_url') ?: '/products' %}
+{% set mascot_image = theme.settings.get('hero_image') ?: ('images/main-mascot.png' | asset) %}
 
 <section class="ee-section ee-hero reveal-up">
   <div class="ee-container ee-hero-grid">
     <div class="ee-hero-copy">
-      <p class="ee-chip">{{ trans('theme.hero_chip') }}</p>
-      <h1 class="ee-hero-title">{{ hero_title }}</h1>
+      <p class="ee-chip">{{ hero_badge }}</p>
+      <h1 class="ee-hero-title">
+        {{ hero_title_main }}
+        <span>{{ hero_title_highlight }}</span>
+      </h1>
       <p class="ee-hero-subtitle">{{ hero_subtitle }}</p>
       <div class="ee-hero-actions">
         <a href="{{ cta_primary_url }}" class="ee-btn ee-btn-primary">{{ cta_primary }}</a>

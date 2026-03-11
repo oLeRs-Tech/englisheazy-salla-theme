@@ -1,18 +1,18 @@
+{% set use_store_logo = theme.settings.get('use_store_logo', false) %}
+{% set package_label = theme.settings.get('nav_package_label') ?: trans('theme.menu_package') %}
+{% set logo_src = (use_store_logo and store.logo) ? store.logo : ('images/logo-z.png' | asset) %}
+
 <header class="ee-header">
   <div class="ee-container ee-header-inner">
     <a href="{{ store.url }}" class="ee-logo-wrap" aria-label="{{ trans('theme.menu_home') }}">
-      {% if store.logo %}
-        <img src="{{ store.logo }}" alt="{{ store.name }}" class="ee-logo">
-      {% else %}
-        <img src="{{ 'images/logo-z.png' | asset }}" alt="{{ store.name }}" class="ee-logo">
-      {% endif %}
-      <span class="ee-logo-text">{{ store.name ?: trans('theme.brand_name') }}</span>
+      <img src="{{ logo_src }}" alt="{{ store.name }}" class="ee-logo">
+      <span class="ee-logo-text">{{ trans('theme.brand_name') }}</span>
     </a>
 
     <nav class="ee-nav" aria-label="Main">
       <a href="{{ store.url }}" class="ee-nav-link">{{ trans('theme.menu_home') }}</a>
       <a href="{{ store.url ~ '/products' }}" class="ee-nav-link">{{ trans('theme.menu_books') }}</a>
-      <a href="{{ store.url ~ '/products' }}" class="ee-nav-link ee-nav-link--highlight">{{ trans('theme.menu_package') }}</a>
+      <a href="{{ store.url ~ '/products' }}" class="ee-nav-link ee-nav-link--highlight">{{ package_label }}</a>
       <a href="{{ store.url ~ '/contact-us' }}" class="ee-nav-link">{{ trans('theme.menu_contact') }}</a>
     </nav>
   </div>

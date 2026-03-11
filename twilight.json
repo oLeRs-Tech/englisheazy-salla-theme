@@ -5,7 +5,7 @@
   },
   "repository": "https://github.com/oLeRs-Tech/englisheazy-salla-theme",
   "author_email": "support@englisheazy.com",
-  "version": "1.0.2",
+  "version": "2.0.0",
   "theme_name": "EnglishEazy",
   "repo_url": "https://github.com/oLeRs-Tech/englisheazy-salla-theme",
   "support_url": "https://englisheazy.com",
@@ -15,284 +15,319 @@
   ],
   "settings": [
     {
+      "id": "use_store_logo",
+      "type": "boolean",
+      "format": "switch",
+      "label": "استخدام شعار المتجر بدل شعار Z",
+      "value": false
+    },
+    {
+      "id": "nav_package_label",
       "type": "string",
-      "label": "Store headline",
-      "id": "store_headline",
       "format": "text",
-      "value": "EnglishEazy"
-    }
-  ],
-  "components": [
+      "label": "اسم زر الباقة في القائمة",
+      "value": "The Z Package"
+    },
     {
-      "key": "d0e36ce7-9da2-4b60-b430-72a8b9fef157",
-      "name": "hero",
-      "title": {
-        "ar": "قسم البداية",
-        "en": "Hero Section"
-      },
-      "icon": "sicon-image",
-      "path": "home.hero",
+      "id": "hero_badge",
+      "type": "string",
+      "format": "text",
+      "label": "شارة قسم البداية",
+      "value": "EnglishEazy Method"
+    },
+    {
+      "id": "hero_title_main",
+      "type": "string",
+      "format": "text",
+      "label": "العنوان الرئيسي",
+      "value": "تعلّم الإنجليزية بثقة"
+    },
+    {
+      "id": "hero_title_highlight",
+      "type": "string",
+      "format": "text",
+      "label": "الجزء المميز من العنوان",
+      "value": "وبدون تشتت"
+    },
+    {
+      "id": "hero_subtitle",
+      "type": "string",
+      "format": "textarea",
+      "label": "الوصف المختصر في البداية",
+      "value": "كتب عملية وتمارين واضحة تساعدك تبني لغتك خطوة بخطوة حتى تتقدم في القراءة والكتابة والتحدث."
+    },
+    {
+      "id": "hero_primary_cta_text",
+      "type": "string",
+      "format": "text",
+      "label": "نص الزر الرئيسي",
+      "value": "تصفح الكتب"
+    },
+    {
+      "id": "hero_primary_cta_url",
+      "type": "string",
+      "format": "text",
+      "label": "رابط الزر الرئيسي",
+      "value": "/products"
+    },
+    {
+      "id": "hero_secondary_cta_text",
+      "type": "string",
+      "format": "text",
+      "label": "نص الزر الثانوي",
+      "value": "احصل على الباقة"
+    },
+    {
+      "id": "hero_secondary_cta_url",
+      "type": "string",
+      "format": "text",
+      "label": "رابط الزر الثانوي",
+      "value": "/products"
+    },
+    {
+      "id": "hero_image",
+      "type": "string",
+      "format": "image",
+      "label": "صورة الهيرو"
+    },
+    {
+      "id": "stat_books_value",
+      "type": "string",
+      "format": "text",
+      "label": "رقم الكتب",
+      "value": "6"
+    },
+    {
+      "id": "stat_books_label",
+      "type": "string",
+      "format": "text",
+      "label": "وصف الكتب",
+      "value": "كتب تعليمية متخصصة"
+    },
+    {
+      "id": "stat_vocab_value",
+      "type": "string",
+      "format": "text",
+      "label": "رقم المفردات",
+      "value": "1000+"
+    },
+    {
+      "id": "stat_vocab_label",
+      "type": "string",
+      "format": "text",
+      "label": "وصف المفردات",
+      "value": "مفردة إنجليزية مختارة"
+    },
+    {
+      "id": "stat_phrases_value",
+      "type": "string",
+      "format": "text",
+      "label": "رقم الجمل",
+      "value": "700+"
+    },
+    {
+      "id": "stat_phrases_label",
+      "type": "string",
+      "format": "text",
+      "label": "وصف الجمل",
+      "value": "جملة جاهزة للاستعمال"
+    },
+    {
+      "id": "stat_levels_value",
+      "type": "string",
+      "format": "text",
+      "label": "المستويات",
+      "value": "A1-C2"
+    },
+    {
+      "id": "stat_levels_label",
+      "type": "string",
+      "format": "text",
+      "label": "وصف المستويات",
+      "value": "مستويات تعلم متدرجة"
+    },
+    {
+      "id": "package_badge",
+      "type": "string",
+      "format": "text",
+      "label": "شارة الباقة",
+      "value": "The Z Package"
+    },
+    {
+      "id": "package_title",
+      "type": "string",
+      "format": "text",
+      "label": "عنوان الباقة",
+      "value": "ابدأ بخطة تعليم متكاملة"
+    },
+    {
+      "id": "package_subtitle",
+      "type": "string",
+      "format": "textarea",
+      "label": "وصف الباقة",
+      "value": "مجموعة كتب متكاملة تغطي أساسيات الإنجليزية بأسلوب تدريجي واضح ومباشر."
+    },
+    {
+      "id": "package_price",
+      "type": "string",
+      "format": "text",
+      "label": "سعر الباقة",
+      "value": "149"
+    },
+    {
+      "id": "package_cta_text",
+      "type": "string",
+      "format": "text",
+      "label": "نص زر الباقة",
+      "value": "اشترِ الآن"
+    },
+    {
+      "id": "package_cta_url",
+      "type": "string",
+      "format": "text",
+      "label": "رابط زر الباقة",
+      "value": "/products"
+    },
+    {
+      "id": "books_section_title",
+      "type": "string",
+      "format": "text",
+      "label": "عنوان قسم الكتب",
+      "value": "مكتبة كتب EnglishEazy"
+    },
+    {
+      "id": "books_section_subtitle",
+      "type": "string",
+      "format": "textarea",
+      "label": "وصف قسم الكتب",
+      "value": "كتب مصممة للطالب العربي مع منهج عملي واضح وتدريجي."
+    },
+    {
+      "id": "books_collection",
+      "type": "collection",
+      "format": "collection",
+      "label": "بطاقات الكتب",
+      "item_label": "كتاب",
+      "minLength": 1,
+      "maxLength": 12,
       "fields": [
         {
           "id": "title",
           "type": "string",
           "format": "text",
-          "label": "Title",
-          "value": "تعلم الإنجليزية بثقة وبدون تشتت"
+          "label": "عنوان الكتاب"
         },
         {
-          "id": "subtitle",
+          "id": "description",
           "type": "string",
           "format": "textarea",
-          "label": "Subtitle",
-          "value": "كتب عملية وتمارين واضحة تساعدك تبني لغتك خطوة بخطوة."
-        },
-        {
-          "id": "primary_cta_text",
-          "type": "string",
-          "format": "text",
-          "label": "Primary button text",
-          "value": "تصفح الكتب"
-        },
-        {
-          "id": "primary_cta_url",
-          "type": "string",
-          "format": "text",
-          "label": "Primary button URL",
-          "value": "/products"
-        },
-        {
-          "id": "secondary_cta_text",
-          "type": "string",
-          "format": "text",
-          "label": "Secondary button text",
-          "value": "اشتر الباقة"
-        },
-        {
-          "id": "secondary_cta_url",
-          "type": "string",
-          "format": "text",
-          "label": "Secondary button URL",
-          "value": "/products"
-        },
-        {
-          "id": "image",
-          "type": "string",
-          "format": "image",
-          "label": "Hero image"
-        }
-      ]
-    },
-    {
-      "key": "1cf5ba99-f14e-44e6-8abc-224ea7d1c55e",
-      "name": "stats",
-      "title": {
-        "ar": "قسم الإحصائيات",
-        "en": "Stats Section"
-      },
-      "icon": "sicon-chart-bar",
-      "path": "home.stats",
-      "fields": [
-        {
-          "id": "books_value",
-          "type": "string",
-          "format": "text",
-          "label": "Books value",
-          "value": "6"
-        },
-        {
-          "id": "books_label",
-          "type": "string",
-          "format": "text",
-          "label": "Books label",
-          "value": "كتب متخصصة"
-        },
-        {
-          "id": "vocab_value",
-          "type": "string",
-          "format": "text",
-          "label": "Vocabulary value",
-          "value": "1000+"
-        },
-        {
-          "id": "vocab_label",
-          "type": "string",
-          "format": "text",
-          "label": "Vocabulary label",
-          "value": "مفردة مختارة"
-        },
-        {
-          "id": "phrases_value",
-          "type": "string",
-          "format": "text",
-          "label": "Phrases value",
-          "value": "700+"
-        },
-        {
-          "id": "phrases_label",
-          "type": "string",
-          "format": "text",
-          "label": "Phrases label",
-          "value": "جملة جاهزة"
-        },
-        {
-          "id": "levels_value",
-          "type": "string",
-          "format": "text",
-          "label": "Levels value",
-          "value": "A1-C2"
-        },
-        {
-          "id": "levels_label",
-          "type": "string",
-          "format": "text",
-          "label": "Levels label",
-          "value": "مستويات تعلم"
-        }
-      ]
-    },
-    {
-      "key": "1b0177bf-af23-43d5-b8f0-4f7004f4bf0c",
-      "name": "package",
-      "title": {
-        "ar": "قسم الباقة",
-        "en": "Package Section"
-      },
-      "icon": "sicon-box",
-      "path": "home.package",
-      "fields": [
-        {
-          "id": "badge",
-          "type": "string",
-          "format": "text",
-          "label": "Badge",
-          "value": "The Z Package"
-        },
-        {
-          "id": "title",
-          "type": "string",
-          "format": "text",
-          "label": "Title",
-          "value": "ابدأ بخطة تعليم متكاملة"
-        },
-        {
-          "id": "subtitle",
-          "type": "string",
-          "format": "textarea",
-          "label": "Subtitle",
-          "value": "مجموعة كتب متكاملة تغطي أساسيات الإنجليزية بأسلوب تدريجي واضح."
+          "label": "وصف الكتاب"
         },
         {
           "id": "price",
           "type": "string",
           "format": "text",
-          "label": "Price",
-          "value": "149"
+          "label": "السعر"
         },
         {
-          "id": "cta_text",
+          "id": "button_text",
           "type": "string",
           "format": "text",
-          "label": "Button text",
-          "value": "اشتر الآن"
+          "label": "نص الزر"
         },
         {
-          "id": "cta_url",
+          "id": "url",
           "type": "string",
           "format": "text",
-          "label": "Button URL",
-          "value": "/products"
+          "label": "الرابط"
+        },
+        {
+          "id": "image",
+          "type": "string",
+          "format": "image",
+          "label": "صورة الغلاف"
         }
-      ]
-    },
-    {
-      "key": "ca24f516-04e7-4054-a49f-f08106758e44",
-      "name": "books",
-      "title": {
-        "ar": "قسم الكتب",
-        "en": "Books Grid"
-      },
-      "icon": "sicon-book-open",
-      "path": "home.books",
-      "fields": [
+      ],
+      "value": [
         {
-          "id": "title",
-          "type": "string",
-          "format": "text",
-          "label": "Section title",
-          "value": "مكتبة كتب إنجلش إيزي"
+          "title": "THE Z BOOK - الكتاب الأساسي",
+          "description": "منهج متكامل يساعدك تتعلم الإنجليزية في المهارات الأربع بأسلوب عملي.",
+          "price": "49",
+          "button_text": "التفاصيل",
+          "url": "/products",
+          "image": "https://i.ibb.co/5g9cjZV9/The-Zbook-New-Cover.png"
         },
         {
-          "id": "subtitle",
-          "type": "string",
-          "format": "textarea",
-          "label": "Section subtitle",
-          "value": "كتب مصممة للطالب العربي مع محتوى عملي وسهل التطبيق."
+          "title": "THE Z GRAMMAR - كتاب القواعد",
+          "description": "شرح مبسط ومباشر لأهم قواعد الإنجليزية مع أمثلة سهلة التطبيق.",
+          "price": "29",
+          "button_text": "التفاصيل",
+          "url": "/products",
+          "image": "https://i.ibb.co/mVVWy3w8/image.png"
         },
         {
-          "id": "books",
-          "type": "collection",
-          "format": "collection",
-          "label": "Books list",
-          "item_label": "Book",
-          "minLength": 1,
-          "maxLength": 12,
-          "fields": [
-            {
-              "id": "title",
-              "type": "string",
-              "format": "text",
-              "label": "Book title"
-            },
-            {
-              "id": "description",
-              "type": "string",
-              "format": "textarea",
-              "label": "Book description"
-            },
-            {
-              "id": "price",
-              "type": "string",
-              "format": "text",
-              "label": "Book price"
-            },
-            {
-              "id": "button_text",
-              "type": "string",
-              "format": "text",
-              "label": "Button text"
-            },
-            {
-              "id": "url",
-              "type": "string",
-              "format": "text",
-              "label": "Book URL"
-            },
-            {
-              "id": "image",
-              "type": "string",
-              "format": "image",
-              "label": "Book cover image"
-            }
-          ],
-          "value": [
-            {
-              "title": "THE Z BOOK - الكتاب الأساسي",
-              "description": "كتاب تأسيسي يساعدك تتعلم الإنجليزية بطريقة واضحة وعملية.",
-              "price": "49",
-              "button_text": "التفاصيل",
-              "url": "/products"
-            },
-            {
-              "title": "THE Z GRAMMAR - كتاب القواعد",
-              "description": "شرح مبسط لأهم قواعد الإنجليزية مع أمثلة تطبيقية.",
-              "price": "29",
-              "button_text": "التفاصيل",
-              "url": "/products"
-            }
-          ]
+          "title": "THE Z VOCABULARY - كتاب الكلمات",
+          "description": "مفردات مترجمة في مواضيع يومية لبناء حصيلتك اللغوية بسرعة.",
+          "price": "29",
+          "button_text": "التفاصيل",
+          "url": "/products",
+          "image": "https://i.ibb.co/6cjcyqfK/image.png"
+        },
+        {
+          "title": "THE Z PHRASES - كتاب الجمل",
+          "description": "جمل جاهزة للاستعمال في مواقف الحياة اليومية والتواصل الفعلي.",
+          "price": "29",
+          "button_text": "التفاصيل",
+          "url": "/products",
+          "image": "https://i.ibb.co/JWmswqJM/image.png"
+        },
+        {
+          "title": "THE Z SPEAKS - كتاب التحدث",
+          "description": "محادثات مترجمة وتمارين عملية لتقوية مهارة التحدث بثقة.",
+          "price": "29",
+          "button_text": "التفاصيل",
+          "url": "/products",
+          "image": "https://i.ibb.co/LdFc5s2m/image.png"
+        },
+        {
+          "title": "THE Z WRITE - كتاب الكتابة",
+          "description": "أساليب كتابة منظمة مع تدريبات واضحة لتحسين التعبير باللغة الإنجليزية.",
+          "price": "29",
+          "button_text": "التفاصيل",
+          "url": "/products",
+          "image": "https://i.ibb.co/Z69hTm3N/image.png"
         }
       ]
     }
-  ]
+  ],
+  "components": [
+    {
+      "name": "header",
+      "path": "src/views/components/header/header.twig"
+    },
+    {
+      "name": "footer",
+      "path": "src/views/components/footer/footer.twig"
+    },
+    {
+      "name": "home.hero",
+      "path": "src/views/components/home/hero.twig"
+    },
+    {
+      "name": "home.stats",
+      "path": "src/views/components/home/stats.twig"
+    },
+    {
+      "name": "home.package",
+      "path": "src/views/components/home/package.twig"
+    },
+    {
+      "name": "home.books",
+      "path": "src/views/components/home/books.twig"
+    }
+  ],
+  "description": {
+    "ar": "ثيم متجر كتب بتصميم عصري يطابق هوية EnglishEazy.",
+    "en": "A premium books-store theme aligned with EnglishEazy visual identity."
+  }
 }
