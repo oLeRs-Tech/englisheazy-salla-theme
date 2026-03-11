@@ -158,6 +158,54 @@ body.ee-body {
   transition: transform 0.18s ease, border-color 0.18s ease, color 0.18s ease, box-shadow 0.18s ease !important;
 }
 
+/* Host-level fallback for web components with shadow DOM */
+.s-product-card-entry,
+.s-products-slider-content {
+  --color-primary: #e09068;
+}
+
+.s-product-card-entry salla-add-product-button,
+.s-products-slider-content salla-add-product-button {
+  display: block;
+  border-radius: 18px;
+  box-shadow: 0 5px 0 #d9d9d9 !important;
+  overflow: visible;
+}
+
+.s-product-card-entry salla-add-product-button:hover,
+.s-products-slider-content salla-add-product-button:hover {
+  transform: translateY(-1px);
+}
+
+.s-product-card-entry salla-add-product-button:active,
+.s-products-slider-content salla-add-product-button:active {
+  transform: translateY(2px);
+  box-shadow: 0 2px 0 #d9d9d9 !important;
+}
+
+/* If Salla exposes parts, this will style internal button exactly */
+.s-product-card-entry salla-add-product-button::part(button),
+.s-product-card-entry salla-add-product-button::part(base),
+.s-product-card-entry salla-add-product-button::part(container),
+.s-products-slider-content salla-add-product-button::part(button),
+.s-products-slider-content salla-add-product-button::part(base),
+.s-products-slider-content salla-add-product-button::part(container) {
+  min-height: 52px !important;
+  border: 2px solid #e7b89f !important;
+  border-radius: 18px !important;
+  background: #fff !important;
+  color: #e09068 !important;
+  box-shadow: none !important;
+}
+
+.s-product-card-entry salla-add-product-button::part(label),
+.s-product-card-entry salla-add-product-button::part(text),
+.s-products-slider-content salla-add-product-button::part(label),
+.s-products-slider-content salla-add-product-button::part(text) {
+  color: inherit !important;
+  font-weight: 800 !important;
+}
+
 .s-product-card-entry salla-add-product-button .s-button-btn:hover,
 .s-product-card-entry .btn--add-to-cart:hover,
 .s-products-slider-content salla-add-product-button .s-button-btn:hover,
