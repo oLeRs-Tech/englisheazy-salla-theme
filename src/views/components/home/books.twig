@@ -5,7 +5,7 @@
       <p>{{ component.subtitle ?: trans('theme.books_subtitle') }}</p>
     </header>
     <div class="ee-books-grid">
-      {% for book in component.items %}
+      {% for book in component.books %}
         {% set book_title = book.title ?: trans('theme.book_default_title') %}
         {% set book_description = book.description ?: trans('theme.book_default_description') %}
         {% set book_price = book.price ?: '29' %}

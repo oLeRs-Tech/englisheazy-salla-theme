@@ -4,7 +4,7 @@
 {% set cta_primary_url = component.primary_cta_url ?: '/products' %}
 {% set cta_secondary = component.secondary_cta_text ?: trans('theme.hero_secondary_cta_default') %}
 {% set cta_secondary_url = component.secondary_cta_url ?: '/products' %}
-{% set mascot_image = component.mascot_image ?: ('images/main-mascot.png' | asset) %}
+{% set mascot_image = component.image ?: ('images/main-mascot.png' | asset) %}
 
 <section class="ee-section ee-hero reveal-up">
   <div class="ee-container ee-hero-grid">

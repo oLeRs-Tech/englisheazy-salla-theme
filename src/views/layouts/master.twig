@@ -11,6 +11,13 @@
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=Manrope:wght@500;700;800&display=swap" rel="stylesheet">
   {% hook head %}
   <link rel="stylesheet" href="{{ 'app.css' | asset }}">
+  <style>
+    /* Fallback styles in case asset loading is delayed in preview */
+    .ee-logo { width: 42px; height: 42px; object-fit: contain; }
+    .ee-header-inner { display: flex; align-items: center; justify-content: space-between; }
+    .ee-nav { display: flex; gap: .5rem; }
+    .ee-nav a { text-decoration: none; }
+  </style>
   {% hook 'head:end' %}
 </head>
 <body id="app" class="ee-body {% hook 'body:classes' %}">
