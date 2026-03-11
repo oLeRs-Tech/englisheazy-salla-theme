@@ -33,6 +33,23 @@ body.ee-body {
   line-height: 1.65;
 }
 
+/* Debug marker: helps verify the custom theme is actually loaded on Salla preview. */
+body.ee-body::before {
+  content: "ENGLISHEAZY THEME";
+  position: fixed;
+  top: 8px;
+  left: 8px;
+  z-index: 9999;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: #de875f;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  pointer-events: none;
+}
+
 .ee-bg-pattern {
   position: fixed;
   inset: 0;
